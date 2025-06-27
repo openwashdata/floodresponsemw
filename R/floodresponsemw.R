@@ -1,0 +1,55 @@
+#' Malawi USAID Flood Response – Water Point Assessment 2019 - 2020
+#' 
+#' This dataset contains detailed field-level information on the status and functionality of rural water points across Malawi, 
+#' collected as part of the USAID Flood Response initiative between 2019 and 2020. The data was gathered using the mWater mobile data 
+#' collection platform, enabling standardized, GPS-tagged assessments directly from field locations.
+#' 
+#' @format A tibble with 684 rows and 45 variables
+#' \describe{
+#'   \item{submitted_on}{Date when the water point assessment form was submitted.}
+#'   \item{water_point_name}{Name or identifier of the water point site.}
+#'   \item{latitude}{Latitude coordinate of the water point location.}
+#'   \item{longitude}{Longitude coordinate of the water point location.}
+#'   \item{total_users_of_water_point}{Number of people currently using the water point.}
+#'   \item{water_point_photos}{Photos taken to show the current condition of the water point.}
+#'   \item{likely_submerged_during_flood}{Whether the water point was likely submerged during recent flooding (Yes or No).}
+#'   \item{evidence_submerged}{Evidence observed that the water point was submerged.}
+#'   \item{evidence_not_submerged}{Evidence observed that the water point was not submerged.}
+#'   \item{functional_status}{Current operational status of the water point.}
+#'   \item{pumpable_at_visit}{Whether water could be pumped during the visit (Yes or No).}
+#'   \item{reported_problems}{List of problems reported or observed (e.g., broken parts, contamination).}
+#'   \item{reported_problems_other}{Additional problem descriptions not in the predefined list.}
+#'   \item{water_quality_problems}{Specific issues related to water quality (e.g., bad smell, taste, turbidity).}
+#'   \item{civil_works_problems}{Structural or construction related issues affecting the water point.}
+#'   \item{civil_works_photo}{Photo documenting the civil works issue.}
+#'   \item{pump_problems}{Mechanical issues related to the pump (e.g., broken handle).}
+#'   \item{pump_problems_other}{Additional pump issues not listed in predefined options.}
+#'   \item{pump_problems_photo}{Photo documenting the pump issue.}
+#'   \item{pump_operational_feel}{Assessors impression of the pumps functionality during operation.}
+#'   \item{time_to_pump_20l}{Time taken to pump 20 liters of water (in seconds).}
+#'   \item{strokes_to_yield_water}{Number of strokes required to start yielding water.}
+#'   \item{sediment_presence}{Whether visible sediment was present in the water.}
+#'   \item{electrical_conductivity_magnitude}{Measured electrical conductivity value of the water.}
+#'   \item{electrical_conductivity_units}{Units used to measure electrical conductivity (e.g., uS/cm).}
+#'   \item{total_dissolved_solids_ppt}{Total dissolved solids in parts per thousand (ppt).}
+#'   \item{ph}{pH level of the water sample.}
+#'   \item{fluoride_ppm}{Fluoride concentration in parts per million (ppm).}
+#'   \item{ammonia_mg_per_l}{Ammonia concentration in milligrams per liter (mg/L).}
+#'   \item{nitrate_mg_per_l}{Nitrate concentration in milligrams per liter (mg/L).}
+#'   \item{free_chlorine_mg_per_l}{Free chlorine concentration in milligrams per liter (mg/L).}
+#'   \item{arsenic_magnitude}{Measured value of arsenic in the water.}
+#'   \item{arsenic_units}{Units used to measure arsenic concentration.}
+#'   \item{turbidity_magnitude}{Turbidity level measured using a turbidity tube.}
+#'   \item{turbidity_units}{Units used for turbidity measurement (e.g., NTU).}
+#'   \item{temperature_magnitude}{Temperature of the water sample (numeric value).}
+#'   \item{temperature_units}{Units used for temperature (e.g., degree Celcius).}
+#'   \item{temperature_time}{Time the temperature was recorded.}
+#'   \item{comments}{Additional remarks or observations by the enumerator.}
+#'   \item{sample_type}{Type of water sample collected (e.g., raw, treated).}
+#'   \item{sample_date}{Date the water sample was taken.}
+#'   \item{mpn_100ml}{Most probable number (MPN) of bacteria per 100 ml of water.}
+#'   \item{upper_95_ci_100ml}{Upper 95 percentage confidence interval of MPN per 100 ml.}
+#'   \item{health_risk_category}{Risk classification based on MPN results (e.g., low, medium, high).}
+#'   \item{color_change_image}{Image showing color change in test compartments used for bacterial analysis.}
+#' }
+"floodresponsemw"
