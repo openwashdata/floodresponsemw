@@ -1,5 +1,5 @@
 Package: floodresponsemw
-Title: What the Package Does (One Line, Title Case)
+Title: Water Point Assessments - USAID Flood Response Malawi 2019-2020
 Version: 0.0.0.9000
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
@@ -21,7 +21,11 @@ Authors@R: c(
     person("Rober", "Gerald", role = "ctb"),
     person("Thokozani", "Kawaza", role = "ctb")
   )
-Description: What the package does (one paragraph).
+Description: Field-level data on rural water point status and functionality
+    across Malawi, collected during the USAID Flood Response initiative
+    (2019-2020). Includes GPS locations, flood impact indicators, pump
+    functionality, water quality measurements, and microbial contamination
+    data from mWater mobile assessments.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -31,6 +35,6 @@ Depends:
 LazyData: true
 Language: en-GB
 Config/Needs/website: rmarkdown
-Date: 2025-06-27
+Date: 2025-07-16
 URL: https://github.com/openwashdata/floodresponsemw
 BugReports: https://github.com/openwashdata/floodresponsemw/issues
