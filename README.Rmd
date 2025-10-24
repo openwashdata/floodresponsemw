@@ -30,6 +30,7 @@ knitr::opts_chunk$set(
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 [![DOI](https://zenodo.org/badge/DOI/.svg)](https://zenodo.org/doi/)
+
 <!-- badges: end -->
 
 This dataset contains detailed field-level information on the status and
@@ -131,7 +132,9 @@ read_csv("data-raw/dictionary.csv") |>
 
 ## Data
 
-The package provides access to field-level assessment data on rural water point infrastructure in Malawi. It was collected as part of the USAID Flood Response program in 2019 - 2020
+The package provides access to field-level assessment data on rural
+water point infrastructure in Malawi. It was collected as part of the
+USAID Flood Response program in 2019 - 2020
 
 ```{r}
 library(floodresponsemw)
@@ -139,7 +142,8 @@ library(floodresponsemw)
 
 ### floodresponsemw
 
-The dataset `floodresponsemw` has `r nrow(floodresponsemw)` observations and `r ncol(floodresponsemw)` variables
+The dataset `floodresponsemw` has `r nrow(floodresponsemw)` observations
+and `r ncol(floodresponsemw)` variables
 
 ```{r}
 floodresponsemw |> 
