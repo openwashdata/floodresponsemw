@@ -1,0 +1,264 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# Water Point Assessments – USAID Flood Response (Malawi, 2019–2020)
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+[![DOI](https://zenodo.org/badge/DOI/.svg)](https://zenodo.org/doi/)
+<!-- badges: end -->
+
+This dataset contains detailed field-level information on the status and
+functionality of rural water points across Malawi, collected as part of
+the USAID Flood Response initiative between 2019 and 2020. The data was
+gathered using the mWater mobile data collection platform, enabling
+standardized, GPS-tagged assessments directly from field locations.
+
+Each record in the dataset represents a single visit to a water point,
+capturing both quantitative measurements and qualitative observations.
+The dataset includes links to photographs, physical infrastructure
+status, microbiological testing results and site-level comments by
+enumerators.
+
+**Key variables include:**
+
+-   Location and identity of the water point (GPS coordinates, site
+    name)
+-   User estimates (number of people served)
+-   Flood impact indicators (evidence of submersion or erosion)
+-   Pump and structural functionality (operational status, repair needs)
+-   Water quality data (e.g., turbidity, arsenic, nitrate, temperature)
+-   Microbial contamination indicators and associated health risk
+    categories
+
+**Use Cases of the Data**
+
+This dataset serves as a critical tool for stakeholders involved in
+water, sanitation, and hygiene (WASH), disaster recovery, and
+infrastructure management. It supports:
+
+-   Emergency response planning – identifying flood-affected and
+    non-functional water points
+-   Infrastructure rehabilitation – prioritizing repair of pumps,
+    boreholes, and civil works
+-   Water quality monitoring – detecting contamination risks due to
+    floods or poor maintenance
+-   Health risk assessments – classifying water points based on
+    microbial and chemical testing
+-   WASH program design – guiding resource allocation for future
+    interventions
+-   Research and policy analysis – evaluating resilience and
+    vulnerability of rural water systems
+
+**Primary Users of the Dataset**
+
+1.  Government agencies (e.g., Malawi Ministry of Water and Sanitation)
+2.  Donor organizations and NGOs (e.g., USAID, UNICEF, WaterAid)
+3.  WASH engineers and field teams
+4.  Public health professionals
+5.  Disaster response and recovery planners
+6.  Researchers and academics studying water infrastructure, flood
+    resilience, or environmental health
+
+## Installation
+
+You can install the development version of floodresponsemw from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("openwashdata/floodresponsemw")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+1.  Click Download CSV. A window opens that displays the CSV in your
+    browser.
+2.  Right-click anywhere inside the window and select "Save Page As...".
+3.  Save the file in a folder of your choice.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/openwashdata/floodresponsemw/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to field-level assessment data on rural water point infrastructure in Malawi. It was collected as part of the USAID Flood Response program in 2019 - 2020
+
+```{r}
+library(floodresponsemw)
+```
+
+### floodresponsemw
+
+The dataset `floodresponsemw` has `r nrow(floodresponsemw)` observations and `r ncol(floodresponsemw)` variables
+
+```{r}
+floodresponsemw |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "floodresponsemw.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+## Data Visualization Example
+
+```{r}
+library(floodresponsemw)
+# Required Libraries
+library(tidyverse)
+library(leaflet)
+
+# Visualization 1: Interactive Water Point Map
+# View the spatial distribution, functionality, and usage volume of water points.
+
+# Clean and prepare the data
+df_clean <- floodresponsemw %>%
+  # Filter out records missing coordinates
+  filter(!is.na(latitude), !is.na(longitude)) %>%
+  # Assign colors based on functional status
+  mutate(
+    status_color = case_when(
+      functional_status == "Functional" ~ "green",
+      functional_status == "Not functional" ~ "red",
+      TRUE ~ "gray"  # Unknown or missing status
+    )
+  )
+
+# Create an interactive map using leaflet
+leaflet(df_clean) %>%
+  addTiles() %>%  # Add default OpenStreetMap tiles
+  addCircleMarkers(
+    lng = ~longitude,
+    lat = ~latitude,
+    color = ~status_color,  # Color by functional status
+    radius = ~log(total_users_of_water_point + 1) * 2,  
+    stroke = FALSE,
+    fillOpacity = 0.7,
+    # Add popups showing basic water point info
+    popup = ~paste0(
+      "<b>Water Point:</b> ", water_point_name, "<br>",
+      "<b>Status:</b> ", functional_status, "<br>",
+      "<b>Total Users:</b> ", total_users_of_water_point
+    )
+  ) %>%
+  # Add a legend for functional status
+  addLegend(
+    "bottomright",
+    colors = c("green", "red", "gray"),
+    labels = c("Functional", "Not Functional", "Unknown"),
+    title = "Water Point Status"
+  )
+
+# Visualization 2: Flood Impact Map
+# visually assess how flooding has potentially affected water points
+
+# Add a flood-related color column based on survey results
+df_flood <- floodresponsemw %>%
+  mutate(
+    flood_color = case_when(
+      likely_submerged_during_flood == "Yes" ~ "blue",
+      likely_submerged_during_flood == "No" ~ "orange",
+      TRUE ~ "lightgray"  # For NA or uncertain responses
+    )
+  )
+
+# Create a leaflet map for flood impact
+leaflet(df_flood) %>%
+  addTiles() %>%  # Use OpenStreetMap base layer
+  addCircleMarkers(
+    lng = ~longitude,
+    lat = ~latitude,
+    color = ~flood_color,  # Color by flood status
+    radius = 6,
+    stroke = FALSE,
+    fillOpacity = 0.7,
+    # Add popups with flood-related details
+    popup = ~paste0(
+      "<b>Water Point:</b> ", water_point_name, "<br>",
+      "<b>Likely Submerged?:</b> ", likely_submerged_during_flood, "<br>",
+      "<b>Evidence Submerged:</b> ", evidence_submerged, "<br>",
+      "<b>Evidence Not Submerged:</b> ", evidence_not_submerged, "<br>",
+      "<b>Functional Status:</b> ", functional_status
+    )
+  ) %>%
+  # Add legend explaining the color codes for flooding
+  addLegend(
+    "bottomright",
+    colors = c("blue", "orange", "lightgray"),
+    labels = c("Yes", "No", "Unknown"),
+    title = "Submerged During Flood?"
+  )
+
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("floodresponsemw")
+```
