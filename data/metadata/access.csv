@@ -1,0 +1,3 @@
+fileName,name,contentUrl,encodingFormat
+floodresponsemw.csv,floodresponsemw,https://raw.githubusercontent.com/openwashdata/floodresponsemw/main/inst/extdata/floodresponsemw.csv,csv
+floodresponsemw.xlsx,floodresponsemw,https://raw.githubusercontent.com/openwashdata/floodresponsemw/main/inst/extdata/floodresponsemw.xlsx,ooxml

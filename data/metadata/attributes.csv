@@ -1,0 +1,46 @@
+directory,file_name,variable_name,variable_type,description,...6,...7,...8,...9,...10
+data/,floodresponsemw.rda,submitted_on,character,Date when the water point assessment form was submitted.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,water_point_name,character,Name or identifier of the water point site.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,latitude,numeric,Latitude coordinate of the water point location.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,longitude,numeric,Longitude coordinate of the water point location.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,total_users_of_water_point,numeric,Number of people currently using the water point.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,water_point_photos,character,Photos taken to show the current condition of the water point.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,likely_submerged_during_flood,character,Whether the water point was likely submerged during recent flooding (Yes or No).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,evidence_submerged,character,Evidence observed that the water point was submerged.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,evidence_not_submerged,character,Evidence observed that the water point was not submerged.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,functional_status,character,Current operational status of the water point.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,pumpable_at_visit,character,Whether water could be pumped during the visit (Yes or No).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,reported_problems,character,"List of problems reported or observed (e.g., broken parts, contamination).",NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,reported_problems_other,character,Additional problem descriptions not in the predefined list.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,water_quality_problems,character,"Specific issues related to water quality (e.g., bad smell, taste, turbidity).",NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,civil_works_problems,character,Structural or construction related issues affecting the water point.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,civil_works_photo,character,Photo documenting the civil works issue.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,pump_problems,character,"Mechanical issues related to the pump (e.g., broken handle).",NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,pump_problems_other,character,Additional pump issues not listed in predefined options.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,pump_problems_photo,character,Photo documenting the pump issue.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,pump_operational_feel,character,Assessors impression of the pumps functionality during operation.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,time_to_pump_20l,numeric,Time taken to pump 20 liters of water (in seconds).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,strokes_to_yield_water,numeric,Number of strokes required to start yielding water.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,sediment_presence,character,Whether visible sediment was present in the water.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,electrical_conductivity_magnitude,numeric,Measured electrical conductivity value of the water.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,electrical_conductivity_units,character,"Units used to measure electrical conductivity (e.g., uS/cm).",NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,total_dissolved_solids_ppt,numeric,Total dissolved solids in parts per thousand (ppt).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,ph,numeric,pH level of the water sample.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,fluoride_ppm,numeric,Fluoride concentration in parts per million (ppm).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,ammonia_mg_per_l,numeric,Ammonia concentration in milligrams per liter (mg/L).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,nitrate_mg_per_l,numeric,Nitrate concentration in milligrams per liter (mg/L).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,free_chlorine_mg_per_l,numeric,Free chlorine concentration in milligrams per liter (mg/L).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,arsenic_magnitude,numeric,Measured value of arsenic in the water.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,arsenic_units,character,Units used to measure arsenic concentration.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,turbidity_magnitude,numeric,Turbidity level measured using a turbidity tube.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,turbidity_units,character,"Units used for turbidity measurement (e.g., NTU).",NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,temperature_magnitude,numeric,Temperature of the water sample (numeric value).,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,temperature_units,character,"Units used for temperature (e.g., degree Celcius).",NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,temperature_time,character,Time the temperature was recorded.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,comments,character,Additional remarks or observations by the enumerator.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,sample_type,character,"Type of water sample collected (e.g., raw, treated).",NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,sample_date,character,Date the water sample was taken.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,mpn_100ml,numeric,Most probable number (MPN) of bacteria per 100 ml of water.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,upper_95_ci_100ml,numeric,Upper 95 percentage confidence interval of MPN per 100 ml.,NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,health_risk_category,character,"Risk classification based on MPN results (e.g., low, medium, high).",NA,NA,NA,NA,NA
+data/,floodresponsemw.rda,color_change_image,character,Image showing color change in test compartments used for bacterial analysis.,NA,NA,NA,NA,NA
