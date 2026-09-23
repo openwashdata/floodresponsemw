@@ -11,4 +11,4 @@ bibentry(bibtype = "Misc",
          url = "https://github.com/openwashdata/floodresponsemw",
          abstract = "Field-level data on rural water point status and functionality across Malawi, collected during the USAID Flood Response initiative (2019-2020). Includes GPS locations, flood impact indicators, pump functionality, water quality measurements, and microbial contamination data from mWater mobile assessments.",
          keywords = "open data,washdata,water points,flood response,handpumps,water quality,Malawi,flood,floodresponse,waterpoints",
-         version = "0.0.0.9000")
+         version = "0.0.2")

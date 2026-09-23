@@ -8,7 +8,7 @@ message: 'To cite package "floodresponsemw" in publications use:'
 type: dataset
 license: CC-BY-4.0
 title: 'floodresponsemw: Water Point Assessments - USAID Flood Response Malawi 2019-2020'
-version: 0.0.0.9000
+version: 0.0.2
 doi: 10.5281/zenodo.17432023
 abstract: Field-level data on rural water point status and functionality across Malawi,
   collected during the USAID Flood Response initiative (2019-2020). Includes GPS locations,

@@ -1,6 +1,6 @@
 Package: floodresponsemw
 Title: Water Point Assessments - USAID Flood Response Malawi 2019-2020
-Version: 0.0.0.9000
+Version: 0.0.2
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3197-6244")),
