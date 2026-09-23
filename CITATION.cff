@@ -1,14 +1,15 @@
-# --------------------------------------------
-# CITATION file created with {cffr} R package
+# ------------------------------------------------
+# CITATION.cff file created with {cffr} R package
 # See also: https://docs.ropensci.org/cffr/
-# --------------------------------------------
+# ------------------------------------------------
  
 cff-version: 1.2.0
 message: 'To cite package "floodresponsemw" in publications use:'
-type: software
+type: dataset
 license: CC-BY-4.0
 title: 'floodresponsemw: Water Point Assessments - USAID Flood Response Malawi 2019-2020'
-version: 0.0.0.9000
+version: 0.0.2
+doi: 10.5281/zenodo.17432023
 abstract: Field-level data on rural water point status and functionality across Malawi,
   collected during the USAID Flood Response initiative (2019-2020). Includes GPS locations,
   flood impact indicators, pump functionality, water quality measurements, and microbial
@@ -20,10 +21,21 @@ authors:
   orcid: https://orcid.org/0000-0003-3197-6244
 repository-code: https://github.com/openwashdata/floodresponsemw
 url: https://github.com/openwashdata/floodresponsemw
-date-released: '2025-07-16'
+date-released: '2026-09-23'
 contact:
 - family-names: Mhango
   given-names: Emmanuel
   email: emmanuellmhango@gmail.com
   orcid: https://orcid.org/0000-0003-3197-6244
+keywords:
+- open data
+- washdata
+- water points
+- flood response
+- handpumps
+- water quality
+- Malawi
+- flood
+- floodresponse
+- waterpoints
 
