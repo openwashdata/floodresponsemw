@@ -1,5 +1,4 @@
-
-url: https://github.com/openwashdata/floodresponsemw
+url: https://openwashdata.github.io/floodresponsemw/
 template:
   bootstrap: 5
   includes:
