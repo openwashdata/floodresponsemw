@@ -1,7 +1,5 @@
 # Water Point Assessments – USAID Flood Response (Malawi, 2019–2020)
 
-A data package published by [openwashdata](https://openwashdata.org).
-
 This dataset contains detailed field-level information on the status and
 functionality of rural water points across Malawi, collected as part of
 the USAID Flood Response initiative between 2019 and 2020. The data was
@@ -268,6 +266,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/floodresponsemw/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 
