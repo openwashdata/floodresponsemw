@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Water Point Assessments – USAID Flood Response (Malawi, 2019–2020)
+# Water Point Assessments – USAID Flood Response (Malawi, 2019–2020) <a href="https://openwashdata.org"><img src="man/figures/logo.png" align="right" width="120" alt="openwashdata" /></a>
 
 <!-- badges: start -->
 
@@ -11,8 +11,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17432023.svg)](https://zenodo.org/doi/10.5281/zenodo.17432023)
 [![R-CMD-check](https://github.com/openwashdata/floodresponsemw/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/floodresponsemw/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
-
-A data package published by [openwashdata](https://openwashdata.org).
 
 This dataset contains detailed field-level information on the status and
 functionality of rural water points across Malawi, collected as part of
@@ -1311,6 +1309,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/floodresponsemw/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 

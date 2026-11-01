@@ -10,3 +10,5 @@
 ^CITATION\.cff$
 ^\.github$
 ^CLAUDE\.md$
+^_brand\.yml$
+^logos$
