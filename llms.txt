@@ -216,6 +216,8 @@ leaflet(df_clean) %>%
   )
 ```
 
+![](reference/figures/README-unnamed-chunk-7-1.png)
+
 ``` r
 
 
@@ -259,6 +261,8 @@ leaflet(df_flood) %>%
     title = "Submerged During Flood?"
   )
 ```
+
+![](reference/figures/README-unnamed-chunk-7-2.png)
 
 ## License
 
